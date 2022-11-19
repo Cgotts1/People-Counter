@@ -5,20 +5,20 @@ let displayCount = document.querySelector("#count-el")
 let saveBtn = document.querySelector("#save-btn")
 let saveEL = document.querySelector("#save-el")
 
-let count = 0;
+let count = 0;   //starts the counter off at 0
+
 
 increment.addEventListener('click', add)
-
 function add(){
-    count ++;
-    displayCount.innerHTML = count;
+    count ++;                           //adds count by 1
+    displayCount.innerHTML = count;      // displays the count
 }
 
+
 saveBtn.addEventListener('click', save)
-
-
 function save(){
-    let countDash = count + " - "
-    saveEL.innerHTML += countDash
-    console.log(count)
+    let countDash = count + " - ";
+    saveEL.innerHTML += countDash;      // += keeps adding to the counting log
+    count = 0;                       //resets count to 0 so it can start from there next time
+    displayCount.innerHTML =  0;     // resets the display to 0
 }
