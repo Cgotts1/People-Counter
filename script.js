@@ -2,6 +2,9 @@
 
 let increment = document.querySelector("#increment-btn")
 let displayCount = document.querySelector("#count-el")
+let saveBtn = document.querySelector("#save-btn")
+let saveEL = document.querySelector("#save-el")
+
 let count = 0;
 
 increment.addEventListener('click', add)
@@ -11,5 +14,11 @@ function add(){
     displayCount.innerHTML = count;
 }
 
+saveBtn.addEventListener('click', save)
 
-localStorage.setItem("increment", displayCount.value)
+
+function save(){
+    let countDash = count + " - "
+    saveEL.innerHTML += countDash
+    console.log(count)
+}
