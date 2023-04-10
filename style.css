@@ -47,3 +47,15 @@ p{
     border:solid 1px white;
     opacity: .9;
 }
+
+@media screen and (max-width: 480px) {
+    .counter{
+        font-size: 24px;
+    }
+    p{  
+        font-size: 16px;  
+    }
+    .container{
+        flex-wrap: wrap;
+    }
+  }
